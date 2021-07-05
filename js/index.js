@@ -1,4 +1,5 @@
 
+
 function genera_nota(){
  
     console.log("Se llamó a generar-nota");
@@ -7,13 +8,20 @@ function genera_nota(){
     console.log(nt);
 
     limpiar();
+    var br = document.createElement("br");
 
     var newDiv = document.createElement("div");
-     var newContent = document.createTextNode(nt);
+    var newContent = document.createTextNode(nt);
     newDiv.appendChild(newContent); 
-
+    document.body.appendChild(br);
     var currentDiv = document.getElementById("div1");
     document.body.insertBefore(newDiv, currentDiv);
+
+    newDiv.style.color = "#ffffff"
+    newDiv.style.background = "gray"
+    newDiv.setAttribute("class","container");
+    document.body.appendChild(newDiv);
+
 }
 
 //------------------------------
@@ -28,7 +36,7 @@ function limpiar() {
 }
 //------------------------------
 
-   
+
 
         
     
