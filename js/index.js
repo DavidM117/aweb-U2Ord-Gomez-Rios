@@ -1,38 +1,34 @@
-  
 
 function genera_nota(){
+ 
     console.log("Se llamó a generar-nota");
     
     var nt = document.getElementById("nota").value;
     console.log(nt);
 
-    var body = document.getElementsByTagName("body")[0];
+    limpiar();
 
-    var tabla   = document.createElement("table");
-    var tabla   = document.createElement("table");
-    var tblBody = document.createElement("tbody");
+    var newDiv = document.createElement("div");
+     var newContent = document.createTextNode(nt);
+    newDiv.appendChild(newContent); 
 
-    var hilera = document.createElement("tr");
-
-                
-    var celda = document.createElement("td");
-    var textoCelda = document.createTextNode(nt);
-    celda.appendChild(textoCelda);
-    hilera.appendChild(celda);
-                
-
-    tblBody.appendChild(hilera);
-    tabla.appendChild(tblBody);
-    body.appendChild(tabla);
-    tabla.setAttribute("border", "0");
-    tabla.setAttribute("style","margin: 0 auto;");
-
-
-
+    var currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
 }
 
+//------------------------------
+var ultimo = null;
+function marcar(elemento) {
+    ultimo = elemento;
+}
+function limpiar() {
+    if (ultimo != null) {
+      ultimo.value = "";
+    }
+}
+//------------------------------
 
-
+   
 
         
     

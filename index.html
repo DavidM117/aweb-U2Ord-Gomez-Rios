@@ -19,18 +19,17 @@
     <div class="container form-group">
         <label> Agregar nota:</label>
 
-        <input class="form-control"  type="text" id="nota">
+        <input class="form-control" value="Escribe una nota..." type="text password" id="nota" onfocus="marcar(this);">
         
         <p></p>
 
-        <input type="button" value="Guardar" class="offset-11 btn btn-success" onclick="genera_nota()">
+        <input type="button" value="Guardar" class="offset-md-11 btn btn-success" onclick="genera_nota();" id="bt">
 
         <label> Mis notas:</label>
 
-        <div class="col-md-12" id="principal">
+        <div class="col-md-12 row-2 container bg-primary text-white" id="principal">
+            <p></p>
         </div>
-        
-    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
